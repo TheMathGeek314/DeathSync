@@ -22,5 +22,3 @@ namespace DeathSync {
         }
     }
 }
-
-//accidental mw/is dependency
