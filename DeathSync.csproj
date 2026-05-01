@@ -67,6 +67,9 @@
     <Reference Include="ItemSync">
       <HintPath>..\_dependencies\ItemSync.dll</HintPath>
     </Reference>
+    <Reference Include="KorzUtils">
+      <HintPath>..\_dependencies\KorzUtils.dll</HintPath>
+    </Reference>
     <Reference Include="MenuChanger">
       <HintPath>..\_dependencies\MenuChanger.dll</HintPath>
     </Reference>
@@ -88,6 +91,12 @@
     <Reference Include="MonoMod.Utils">
       <HintPath>$(HollowKnightRefs)/MonoMod.Utils.dll</HintPath>
     </Reference>
+    <Reference Include="MultiWorldLib">
+      <HintPath>..\_dependencies\MultiWorldLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MultiWorldMod">
+      <HintPath>..\_dependencies\MultiWorldMod.dll</HintPath>
+    </Reference>
     <Reference Include="netstandard">
       <HintPath>$(HollowKnightRefs)/netstandard.dll</HintPath>
     </Reference>
@@ -99,9 +108,6 @@
     </Reference>
     <Reference Include="RandomizerMod">
       <HintPath>..\_dependencies\RandomizerMod.dll</HintPath>
-    </Reference>
-    <Reference Include="RandoSettingsManager">
-      <HintPath>..\_dependencies\RandoSettingsManager.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition">
       <HintPath>$(HollowKnightRefs)/System.ComponentModel.Composition.dll</HintPath>
