@@ -5,7 +5,7 @@ using UnityEngine;
 namespace DeathSync {
     public class DeathSync: Mod, IGlobalSettings<Settings> {
         new public string GetName() => "DeathSync";
-        public override string GetVersion() => "1.0.0.1";
+        public override string GetVersion() => "1.0.1.0";
 
         public static Settings Settings { get; set; } = new();
         public void OnLoadGlobal(Settings s) => Settings = s;
