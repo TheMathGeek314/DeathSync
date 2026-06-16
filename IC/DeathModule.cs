@@ -1,6 +1,7 @@
 ﻿using Modding;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Reflection;
 using ItemChanger;
 
@@ -16,8 +17,16 @@ namespace DeathSync {
 
         public DeathModule() {
             ModuleHandlingProperties = ModuleHandlingFlags.AllowDeserializationFailure;
+
+            List<string> incompatibleMods = new();
             if(ModHooks.GetMod("ScatteredAndLost") is Mod) {
-                throw new CompatibilityException("Scattered and Lost");
+                incompatibleMods.Add("Scattered and Lost");
+            }
+            if(ModHooks.GetMod("KnightOfNights") is Mod) {
+                incompatibleMods.Add("Knight of Nights");
+            }
+            if(incompatibleMods.Count > 0) {
+                throw new CompatibilityException(string.Join(", ", incompatibleMods));
             }
         }
 
@@ -79,6 +88,6 @@ namespace DeathSync {
             mod = otherMod;
         }
         public override string Message => ToString();
-        public override string ToString() => $"DeathSync does not function properly while {mod} is installed. I haven't quite figured out why, but I'm sorry.";
+        public override string ToString() => $"DeathSync does not function properly while you have {mod} installed. I haven't quite figured out why, but I'm sorry.";
     }
 }
